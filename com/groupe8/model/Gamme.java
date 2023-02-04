@@ -1,5 +1,5 @@
 package com.groupe8.model;
-// Generated 31 janv. 2023, 09:27:01 by Hibernate Tools 4.3.6.Final
+// Generated 4 f�vr. 2023, 22:45:41 by Hibernate Tools 4.3.6.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -22,19 +22,22 @@ public class Gamme implements java.io.Serializable {
 	private Integer gammeId;
 	private String nom;
 	private String teint;
+	private int prix;
 	private Set<Produit> produits = new HashSet<Produit>(0);
 
 	public Gamme() {
 	}
 
-	public Gamme(String nom, String teint) {
+	public Gamme(String nom, String teint, int prix) {
 		this.nom = nom;
 		this.teint = teint;
+		this.prix = prix;
 	}
 
-	public Gamme(String nom, String teint, Set<Produit> produits) {
+	public Gamme(String nom, String teint, int prix, Set<Produit> produits) {
 		this.nom = nom;
 		this.teint = teint;
+		this.prix = prix;
 		this.produits = produits;
 	}
 
@@ -66,6 +69,15 @@ public class Gamme implements java.io.Serializable {
 
 	public void setTeint(String teint) {
 		this.teint = teint;
+	}
+
+	@Column(name = "PRIX", nullable = false)
+	public int getPrix() {
+		return this.prix;
+	}
+
+	public void setPrix(int prix) {
+		this.prix = prix;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "gamme")

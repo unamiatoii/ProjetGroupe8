@@ -1,5 +1,5 @@
 package com.groupe8.model;
-// Generated 31 janv. 2023, 09:27:01 by Hibernate Tools 4.3.6.Final
+// Generated 4 f�vr. 2023, 22:45:41 by Hibernate Tools 4.3.6.Final
 
 import java.util.Date;
 import java.util.HashSet;
@@ -29,28 +29,35 @@ public class Gerant implements java.io.Serializable {
 	private String domicileGerant;
 	private Date dateDebut;
 	private Date dateFin;
+	private String password;
+	private String login;
 	private Set<Commande> commandes = new HashSet<Commande>(0);
 	private Set<Achat> achats = new HashSet<Achat>(0);
 
 	public Gerant() {
 	}
 
-	public Gerant(String nomGerant, String prenomGerant, String contactGerant, String domicileGerant, Date dateDebut) {
+	public Gerant(String nomGerant, String prenomGerant, String contactGerant, String domicileGerant, Date dateDebut,
+			String password, String login) {
 		this.nomGerant = nomGerant;
 		this.prenomGerant = prenomGerant;
 		this.contactGerant = contactGerant;
 		this.domicileGerant = domicileGerant;
 		this.dateDebut = dateDebut;
+		this.password = password;
+		this.login = login;
 	}
 
 	public Gerant(String nomGerant, String prenomGerant, String contactGerant, String domicileGerant, Date dateDebut,
-			Date dateFin, Set<Commande> commandes, Set<Achat> achats) {
+			Date dateFin, String password, String login, Set<Commande> commandes, Set<Achat> achats) {
 		this.nomGerant = nomGerant;
 		this.prenomGerant = prenomGerant;
 		this.contactGerant = contactGerant;
 		this.domicileGerant = domicileGerant;
 		this.dateDebut = dateDebut;
 		this.dateFin = dateFin;
+		this.password = password;
+		this.login = login;
 		this.commandes = commandes;
 		this.achats = achats;
 	}
@@ -121,6 +128,24 @@ public class Gerant implements java.io.Serializable {
 
 	public void setDateFin(Date dateFin) {
 		this.dateFin = dateFin;
+	}
+
+	@Column(name = "PASSWORD", nullable = false, length = 32)
+	public String getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@Column(name = "LOGIN", nullable = false, length = 40)
+	public String getLogin() {
+		return this.login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "gerant")

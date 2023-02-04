@@ -1,5 +1,5 @@
 package com.groupe8.model;
-// Generated 31 janv. 2023, 09:27:01 by Hibernate Tools 4.3.6.Final
+// Generated 4 f�vr. 2023, 22:45:41 by Hibernate Tools 4.3.6.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -27,24 +27,27 @@ public class Produit implements java.io.Serializable {
 	private Typeproduit typeproduit;
 	private int quantite;
 	private String description;
+	private int prixunitaire;
 	private Set<Achat> achats = new HashSet<Achat>(0);
 	private Set<Commande> commandes = new HashSet<Commande>(0);
 
 	public Produit() {
 	}
 
-	public Produit(Gamme gamme, Typeproduit typeproduit, int quantite) {
+	public Produit(Gamme gamme, Typeproduit typeproduit, int quantite, int prixunitaire) {
 		this.gamme = gamme;
 		this.typeproduit = typeproduit;
 		this.quantite = quantite;
+		this.prixunitaire = prixunitaire;
 	}
 
-	public Produit(Gamme gamme, Typeproduit typeproduit, int quantite, String description, Set<Achat> achats,
-			Set<Commande> commandes) {
+	public Produit(Gamme gamme, Typeproduit typeproduit, int quantite, String description, int prixunitaire,
+			Set<Achat> achats, Set<Commande> commandes) {
 		this.gamme = gamme;
 		this.typeproduit = typeproduit;
 		this.quantite = quantite;
 		this.description = description;
+		this.prixunitaire = prixunitaire;
 		this.achats = achats;
 		this.commandes = commandes;
 	}
@@ -97,6 +100,15 @@ public class Produit implements java.io.Serializable {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	@Column(name = "PRIXUNITAIRE", nullable = false)
+	public int getPrixunitaire() {
+		return this.prixunitaire;
+	}
+
+	public void setPrixunitaire(int prixunitaire) {
+		this.prixunitaire = prixunitaire;
 	}
 
 	@ManyToMany(fetch = FetchType.LAZY)

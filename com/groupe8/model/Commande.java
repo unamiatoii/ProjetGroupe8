@@ -1,5 +1,5 @@
 package com.groupe8.model;
-// Generated 31 janv. 2023, 09:27:01 by Hibernate Tools 4.3.6.Final
+// Generated 4 f�vr. 2023, 22:45:41 by Hibernate Tools 4.3.6.Final
 
 import java.util.Date;
 import java.util.HashSet;

@@ -1,1 +1,10 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+Pane Vbox {
+	-fx-alignment: center ;
+	-fx-background-color: black;
+}
+Vbox{
+	align-item: center;
+	text-decoration: underline;
+}
+

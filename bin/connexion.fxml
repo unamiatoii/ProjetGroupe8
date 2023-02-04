@@ -1,22 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?xml-stylesheet type="text/css" href="name_of_css_file.css"?>
+<?import com.gluonhq.charm.glisten.control.AppBar?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="537.0" style="-fx-background-color: #007E87;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Label layoutX="118.0" layoutY="31.0" prefHeight="65.0" prefWidth="274.0" style="-fx-background-image: #FFFFFF;" text="CONNEXION">
-         <font>
-            <Font name="Arial Bold" size="44.0" />
-         </font>
-      </Label>
-      <TextField layoutX="136.0" layoutY="131.0" prefHeight="25.0" prefWidth="237.0" promptText="NOM D'UTILISATEUR" />
-      <Button layoutX="200.0" layoutY="245.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: #21405F;" text="SE CONNECTER" textFill="#10ebe6" />
-      <PasswordField layoutX="136.0" layoutY="189.0" prefHeight="25.0" prefWidth="237.0" promptText="MOT DE PASSE" />
-   </children>
-</Pane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Pane prefHeight="293.0" prefWidth="275.0" BorderPane.alignment="CENTER">
+         <children>
+          <AnchorPane layoutX="4.0" minHeight="0.0" minWidth="0.0" prefHeight="76.0" prefWidth="459.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="117.0" layoutY="16.0" prefHeight="45.0" prefWidth="225.0" text="CONNEXION" textAlignment="CENTER">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane layoutX="8.0" layoutY="189.0" minHeight="0.0" minWidth="0.0" prefHeight="96.0" prefWidth="450.0" />
+         </children>
+      </Pane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="53.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <AppBar autoHideProgressBar="true" prefWidth="600.0" titleText="MaBoutik" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <AnchorPane prefHeight="293.0" prefWidth="71.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="293.0" prefWidth="72.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
