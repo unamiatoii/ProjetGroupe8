@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox style="-fx-alignment: center; -fx-background-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-alignment: center; -fx-background-color: #4A919E;">
+         <children>
+            <Label fx:id="connexion" contentDisplay="CENTER" layoutX="160.0" layoutY="90.0" prefHeight="77.0" prefWidth="301.0" style="-fx-font-size: 36; -fx-text-fill: #3f51b5; -fx-alignment: center; -fx-font-weight: bold;" text="CONNEXION" textFill="#212e53">
+               <font>
+                  <Font name="Calibri Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" prefHeight="64.0" prefWidth="301.0" style="-fx-font-size: 36; -fx-text-fill: #3f51b5; -fx-alignment: center; -fx-font-weight: bold;" text="CONNEXION" textFill="#212e53" visible="false">
+               <font>
+                  <Font name="Calibri Bold" size="40.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" VBox.vgrow="NEVER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="193.0" prefWidth="560.0" spacing="50.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="183.0" prefWidth="167.0" spacing="22.0">
+                           <children>
+                              <Label style="-fx-alignment: centr;" text="LOGIN" textFill="#212e53" />
+                              <Label text="Mot de passe :" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="188.0" prefWidth="163.0" spacing="15.0">
+                           <children>
+                              <TextField fx:id="usernameTextField" prefHeight="26.0" prefWidth="127.0" text="Admin" />
+                              <PasswordField fx:id="passwordField" prefHeight="26.0" prefWidth="120.0" text="Admin" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="76.0" prefWidth="560.0" spacing="20.0" VBox.vgrow="NEVER">
+               <children>
+                  <Button fx:id="loginButton" mnemonicParsing="false" onAction="#boutonConnexion" text="Connexion" />
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#boutonAnnule" text="Annuler" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</HBox>
