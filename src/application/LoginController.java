@@ -20,12 +20,6 @@ public class LoginController {
 
     @FXML
     private TextField passwordField;
-
-    @FXML
-    private Label errorLabel;
-    
-    @FXML
-    private Label connexion;
     
     @FXML
     private Button cancelButton;
@@ -36,7 +30,7 @@ public class LoginController {
     public void boutonConnexion(ActionEvent e) throws IOException {
     	
 //    	appel de la vue du menu
-    	Parent pageParent = FXMLLoader.load(getClass().getResource("vueProduits.fxml"));
+    	Parent pageParent = FXMLLoader.load(getClass().getResource("accueil.fxml"));
 		Scene pageScene = new Scene(pageParent);
 		Stage stage = (Stage) loginButton.getScene().getWindow();
 		stage.setScene(pageScene);

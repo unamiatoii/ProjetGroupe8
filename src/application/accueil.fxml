@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.16126656848306334" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1360.0" style="-fx-background-image: url('file:E:/PROJETS/JAVA/groupe8Projet/src/assets/img.jpg'); -fx-background-repeat: no-repeat; -fx-background-size: 1500 700;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="216.0" stylesheets="@application.css">
+         <children>
+            <Button fx:id="goToLoginButton" layoutX="3.0" layoutY="109.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="210.0" text="Se connecter" />
+            <Button fx:id="seeBuysButton" layoutX="3.0" layoutY="215.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="210.0" text="Nouvel Achat" />
+            <Button defaultButton="true" layoutX="3.0" layoutY="319.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="210.0" text="Nouvelle Commande" />
+            <Button layoutX="3.0" layoutY="426.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="210.0" text="Stock" />
+            <Button layoutX="3.0" layoutY="521.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="210.0" text="Commandes enregistrées" />
+            <Button layoutX="3.0" layoutY="600.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="210.0" text="Voir les ventes" />
+         
+            <Label layoutX="51.0" layoutY="14.0" text="MADONNE" textFill="#fcfcfc" />
+            <Label layoutX="51.0" layoutY="35.0" text="KOUASSI" textFill="#fffdfd" />
+            <Button fx:id="deconectionButton" layoutX="-2.0" layoutY="63.0" mnemonicParsing="false" text="Se deconnecter" />
+            <Button fx:id="closeButton" layoutX="134.0" layoutY="63.0" mnemonicParsing="false" text="Fermer" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-image: url('file:C:/Users/Abacuc/Documents/GitHub/ProjetGroupe8/src/assets/bg.jpg'); -fx-background-repeat: no-repeat; -fx-background-size: 1360 700;" stylesheets="@application.css">
+         <children>
+            <Label layoutX="350.0" layoutY="69.0" text="GROUPE HUIT COSMETICS" textFill="#fcfcfc">
+               <font>
+                  <Font name="Times New Roman" size="32.0" />
+               </font>
+            </Label>
+            <Button layoutX="478.0" layoutY="442.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="181.0" text="Voir Les Ventes" />
+            <Button layoutX="169.0" layoutY="236.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="181.0" style="-fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Nouvel Achat" />
+            <Button layoutX="478.0" layoutY="236.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="181.0" text="Nouvelle Commande" />
+            <Button layoutX="834.0" layoutY="236.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="181.0" text="Stock" />
+            <Button layoutX="169.0" layoutY="442.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="181.0" text="Commandes Enregistrees" />
+            <Button layoutX="834.0" layoutY="442.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="181.0" text="Fermer" />
+         </children></AnchorPane>
+  </items>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</SplitPane>
